@@ -101,7 +101,17 @@ class _QrScannerPageState extends State<QrScannerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(title: const Text('Collect Contacts', style: TextStyle(color: Colors.black87)), backgroundColor: Colors.white),
+      appBar: AppBar(
+        title: const Text('Collect Contacts', style: TextStyle(color: Colors.black87)),
+        backgroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout, color: Colors.black54),
+            tooltip: 'Sign out',
+            onPressed: () => _supabase.auth.signOut(),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Container(

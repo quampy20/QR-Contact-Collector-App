@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-import 'qr_scanner_page.dart';
+import 'auth_gate.dart';
 
 /// Supabase project credentials.
 ///
@@ -41,7 +41,7 @@ class ContactApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2563EB)),
       ),
-      home: const QrScannerPage(),
+      home: const AuthGate(),
     );
   }
 }
